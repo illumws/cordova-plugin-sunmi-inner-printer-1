@@ -33,7 +33,7 @@
     ]
   },
   "main": "www/index.js",
-  "module": "www/index.js"
+  "module": "www/index.js",
   "deprecated": false,
   "description": "Cordova/Ionic Sunmi v2 Inner Printer ",
   "engines": {
