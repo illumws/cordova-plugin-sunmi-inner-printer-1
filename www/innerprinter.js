@@ -1,6 +1,6 @@
 var exec = cordova.require('cordova/exec');
 
-export class SunmiInnerPrinter {
+class SunmiInnerPrinter {
 
     constructor() {
         console.log('Printer instanced');
@@ -156,3 +156,5 @@ export class SunmiInnerPrinter {
         exec(successCallback, errorCallback, 'Printer', 'printerStatusStopListener');
     }
 }
+
+export {SunmiInnerPrinter}
