@@ -1,164 +1,158 @@
 var exec = cordova.require('cordova/exec');
 
-var sunmiInnerPrinter = function() {
-    console.log('Printer instanced');
-};
+export class SunmiInnerPrinter {
 
-sunmiInnerPrinter.prototype.show = function(msg, onSuccess, onError) {
-    var errorCallback = function(obj) {
-        onError(obj);
-    };
+    constructor() {
+        console.log('Printer instanced');
+    }
 
-    var successCallback = function(obj) {
-        onSuccess(obj);
-    };
+    show(msg, onSuccess, onError) {
+        var errorCallback = function(obj) {
+            onError(obj);
+        };
 
-    exec(successCallback, errorCallback, 'Printer', 'show', [msg]);
-};
+        var successCallback = function(obj) {
+            onSuccess(obj);
+        };
 
+        exec(successCallback, errorCallback, 'Printer', 'show', [msg]);
+    }
 
-sunmiInnerPrinter.prototype.printerInit = function(onSuccess, onError) {
-    var errorCallback = function(obj) {
-        onError(obj);
-    };
+    printerInit(onSuccess, onError) {
+        var errorCallback = function(obj) {
+            onError(obj);
+        };
 
-    var successCallback = function(obj) {
-        onSuccess(obj);
-    };
+        var successCallback = function(obj) {
+            onSuccess(obj);
+        };
 
-    exec(successCallback, errorCallback, 'Printer', 'printerInit');
-};
+        exec(successCallback, errorCallback, 'Printer', 'printerInit');
+    }
 
-sunmiInnerPrinter.prototype.printerSelfChecking = function(onSuccess, onError) {
-    var errorCallback = function(obj) {
-        onError(obj);
-    };
+    printerSelfChecking(onSuccess, onError) {
+        var errorCallback = function(obj) {
+            onError(obj);
+        };
 
-    var successCallback = function(obj) {
-        onSuccess(obj);
-    };
+        var successCallback = function(obj) {
+            onSuccess(obj);
+        };
 
-    exec(successCallback, errorCallback, 'Printer', 'printerSelfChecking');
-};
+        exec(successCallback, errorCallback, 'Printer', 'printerSelfChecking');
+    }
 
+    getPrinterSerialNo(text, onSuccess, onError) {
+        var errorCallback = function(obj) {onError(obj);};
+        var successCallback = function(obj) {onSuccess(obj);};
+        exec(successCallback, errorCallback, 'Printer', 'getPrinterSerialNo', [text]);
+    }
 
-sunmiInnerPrinter.prototype.getPrinterSerialNo = function(text, onSuccess, onError) {
-    var errorCallback = function(obj) {onError(obj);};
-    var successCallback = function(obj) {onSuccess(obj);};
-    exec(successCallback, errorCallback, 'Printer', 'getPrinterSerialNo', [text]);
-};
+    getPrinterVersion(text, onSuccess, onError) {
+        var errorCallback = function(obj) {onError(obj);};
+        var successCallback = function(obj) {onSuccess(obj);};
+        exec(successCallback, errorCallback, 'Printer', 'getPrinterVersion', [text]);
+    }
 
-sunmiInnerPrinter.prototype.getPrinterVersion = function(text, onSuccess, onError) {
-    var errorCallback = function(obj) {onError(obj);};
-    var successCallback = function(obj) {onSuccess(obj);};
-    exec(successCallback, errorCallback, 'Printer', 'getPrinterVersion', [text]);
-};
+    hasPrinter(text, onSuccess, onError) {
+        var errorCallback = function(obj) {onError(obj);};
+        var successCallback = function(obj) {onSuccess(obj);};
+        exec(successCallback, errorCallback, 'Printer', 'hasPrinter', [text]);
+    }
 
-sunmiInnerPrinter.prototype.hasPrinter = function(text, onSuccess, onError) {
-    var errorCallback = function(obj) {onError(obj);};
-    var successCallback = function(obj) {onSuccess(obj);};
-    exec(successCallback, errorCallback, 'Printer', 'hasPrinter', [text]);
-};
+    getPrintedLength(text, onSuccess, onError) {
+        var errorCallback = function(obj) {onError(obj);};
+        var successCallback = function(obj) {onSuccess(obj);};
+        exec(successCallback, errorCallback, 'Printer', 'getPrintedLength', [text]);
+    }
 
-sunmiInnerPrinter.prototype.getPrintedLength = function(text, onSuccess, onError) {
-    var errorCallback = function(obj) {onError(obj);};
-    var successCallback = function(obj) {onSuccess(obj);};
-    exec(successCallback, errorCallback, 'Printer', 'getPrintedLength', [text]);
-};
+    lineWrap(count, onSuccess, onError) {
+        var errorCallback = function(obj) {onError(obj);};
+        var successCallback = function(obj) {onSuccess(obj);};
+        exec(successCallback, errorCallback, 'Printer', 'lineWrap', [count]);
+    }
 
-sunmiInnerPrinter.prototype.lineWrap = function(count, onSuccess, onError) {
-    var errorCallback = function(obj) {onError(obj);};
-    var successCallback = function(obj) {onSuccess(obj);};
-    exec(successCallback, errorCallback, 'Printer', 'lineWrap', [count]);
-};
+    sendRAWData(data, onSuccess, onError) {
+        var errorCallback = function(obj) {onError(obj);};
+        var successCallback = function(obj) {onSuccess(obj);};
+        exec(successCallback, errorCallback, 'Printer', 'sendRAWData', [data]);
+    }
 
-sunmiInnerPrinter.prototype.sendRAWData = function(data, onSuccess, onError) {
-    var errorCallback = function(obj) {onError(obj);};
-    var successCallback = function(obj) {onSuccess(obj);};
-    exec(successCallback, errorCallback, 'Printer', 'sendRAWData', [data]);
-};
+    setAlignment(align, onSuccess, onError) {
+        var errorCallback = function(obj) {onError(obj);};
+        var successCallback = function(obj) {onSuccess(obj);};
+        exec(successCallback, errorCallback, 'Printer', 'setAlignment', [align]);
+    }
 
-sunmiInnerPrinter.prototype.setAlignment = function(align, onSuccess, onError) {
-    var errorCallback = function(obj) {onError(obj);};
-    var successCallback = function(obj) {onSuccess(obj);};
-    exec(successCallback, errorCallback, 'Printer', 'setAlignment', [align]);
-};
+    setFontName(name, onSuccess, onError) {
+        var errorCallback = function(obj) {onError(obj);};
+        var successCallback = function(obj) {onSuccess(obj);};
+        exec(successCallback, errorCallback, 'Printer', 'setFontName', [name]);
+    }
 
-sunmiInnerPrinter.prototype.setFontName = function(name, onSuccess, onError) {
-    var errorCallback = function(obj) {onError(obj);};
-    var successCallback = function(obj) {onSuccess(obj);};
-    exec(successCallback, errorCallback, 'Printer', 'setFontName', [name]);
-};
+    setFontSize(size, onSuccess, onError) {
+        var errorCallback = function(obj) {onError(obj);};
+        var successCallback = function(obj) {onSuccess(obj);};
+        exec(successCallback, errorCallback, 'Printer', 'setFontSize', [size]);
+    }
 
-sunmiInnerPrinter.prototype.setFontSize = function(size, onSuccess, onError) {
-    var errorCallback = function(obj) {onError(obj);};
-    var successCallback = function(obj) {onSuccess(obj);};
-    exec(successCallback, errorCallback, 'Printer', 'setFontSize', [size]);
-};
+    printTextWithFont(text, typeface, fontsize,  onSuccess, onError) {
+        var errorCallback = function(obj) {onError(obj);};
+        var successCallback = function(obj) {onSuccess(obj);};
+        exec(successCallback, errorCallback, 'Printer', 'printTextWithFont', [text, typeface, fontsize]);
+    }
 
-sunmiInnerPrinter.prototype.printTextWithFont = function(text, typeface, fontsize,  onSuccess, onError) {
-    var errorCallback = function(obj) {onError(obj);};
-    var successCallback = function(obj) {onSuccess(obj);};
-    exec(successCallback, errorCallback, 'Printer', 'printTextWithFont', [text, typeface, fontsize]);
-};
+    printColumnsText(colsTextArr, colsWidthArr, colsAlign,  onSuccess, onError) {
+        var errorCallback = function(obj) {onError(obj);};
+        var successCallback = function(obj) {onSuccess(obj);};
+        exec(successCallback, errorCallback, 'Printer', 'printColumnsText', [colsTextArr, colsWidthArr, colsAlign]);
+    }
 
-sunmiInnerPrinter.prototype.printColumnsText = function(colsTextArr, colsWidthArr, colsAlign,  onSuccess, onError) {
-    var errorCallback = function(obj) {onError(obj);};
-    var successCallback = function(obj) {onSuccess(obj);};
-    exec(successCallback, errorCallback, 'Printer', 'printColumnsText', [colsTextArr, colsWidthArr, colsAlign]);
-};
+    printBitmap(data, width, height,  onSuccess, onError) {
+        var errorCallback = function(obj) {onError(obj);};
+        var successCallback = function(obj) {onSuccess(obj);};
+        exec(successCallback, errorCallback, 'Printer', 'printBitmap', [data, width, height]);
+    }
 
-sunmiInnerPrinter.prototype.printBitmap = function(data, width, height,  onSuccess, onError) {
-    var errorCallback = function(obj) {onError(obj);};
-    var successCallback = function(obj) {onSuccess(obj);};
-    exec(successCallback, errorCallback, 'Printer', 'printBitmap', [data, width, height]);
-};
+    printTextWithFont(text, typeface, fontsize,  onSuccess, onError) {
+        var errorCallback = function(obj) {onError(obj);};
+        var successCallback = function(obj) {onSuccess(obj);};
+        exec(successCallback, errorCallback, 'Printer', 'printTextWithFont', [text, typeface, fontsize]);
+    }
 
+    printBarCode(data, symbology, width, height,  onSuccess, onError) {
+        var errorCallback = function(obj) {onError(obj);};
+        var successCallback = function(obj) {onSuccess(obj);};
+        exec(successCallback, errorCallback, 'Printer', 'printBarCode', [data, symbology, width, height]);
+    }
 
-sunmiInnerPrinter.prototype.printTextWithFont = function(text, typeface, fontsize,  onSuccess, onError) {
-    var errorCallback = function(obj) {onError(obj);};
-    var successCallback = function(obj) {onSuccess(obj);};
-    exec(successCallback, errorCallback, 'Printer', 'printTextWithFont', [text, typeface, fontsize]);
-};
+    printQRCode(data, moduleSize, errorLevel, onSuccess, onError) {
+        var errorCallback = function(obj) {onError(obj);};
+        var successCallback = function(obj) {onSuccess(obj);};
+        exec(successCallback, errorCallback, 'Printer', 'printQRCode', [data, moduleSize, errorLevel]);
+    }
 
-sunmiInnerPrinter.prototype.printBarCode = function(data, symbology, width, height,  onSuccess, onError) {
-    var errorCallback = function(obj) {onError(obj);};
-    var successCallback = function(obj) {onSuccess(obj);};
-    exec(successCallback, errorCallback, 'Printer', 'printBarCode', [data, symbology, width, height]);
-};
+    printOriginalText(text, onSuccess, onError) {
+        var errorCallback = function(obj) {onError(obj);};
+        var successCallback = function(obj) {onSuccess(obj);};
+        exec(successCallback, errorCallback, 'Printer', 'printOriginalText', [text]);
+    }
 
-sunmiInnerPrinter.prototype.printQRCode = function(data, moduleSize, errorLevel, onSuccess, onError) {
-    var errorCallback = function(obj) {onError(obj);};
-    var successCallback = function(obj) {onSuccess(obj);};
-    exec(successCallback, errorCallback, 'Printer', 'printQRCode', [data, moduleSize, errorLevel]);
-};
+    printString(text, onSuccess, onError) {
+        var errorCallback = function(obj) {onError(obj);};
+        var successCallback = function(obj) {onSuccess(obj);};
+        exec(successCallback, errorCallback, 'Printer', 'printString', [text]);
+    }
 
-sunmiInnerPrinter.prototype.printOriginalText = function(text, onSuccess, onError) {
-    var errorCallback = function(obj) {onError(obj);};
-    var successCallback = function(obj) {onSuccess(obj);};
-    exec(successCallback, errorCallback, 'Printer', 'printOriginalText', [text]);
-};
+    printerStatusStartListener(onSuccess, onError) {
+        var errorCallback = function(obj) {onError(obj);};
+        var successCallback = function(obj) {onSuccess(obj);};
+        exec(successCallback, errorCallback, 'Printer', 'printerStatusStartListener');
+    }
 
-
-sunmiInnerPrinter.prototype.printString = function(text, onSuccess, onError) {
-    var errorCallback = function(obj) {onError(obj);};
-    var successCallback = function(obj) {onSuccess(obj);};
-    exec(successCallback, errorCallback, 'Printer', 'printString', [text]);
-};
-
-sunmiInnerPrinter.prototype.printerStatusStartListener = function(onSuccess, onError) {
-    var errorCallback = function(obj) {onError(obj);};
-    var successCallback = function(obj) {onSuccess(obj);};
-    exec(successCallback, errorCallback, 'Printer', 'printerStatusStartListener');
-};
-
-sunmiInnerPrinter.prototype.printerStatusStopListener = function(onSuccess, onError) {
-    var errorCallback = function(obj) {onError(obj);};
-    var successCallback = function(obj) {onSuccess(obj);};
-    exec(successCallback, errorCallback, 'Printer', 'printerStatusStopListener');
-};
-
-
-if (typeof module != 'undefined' && module.exports) {
-    module.exports = sunmiInnerPrinter;
+    printerStatusStopListener(onSuccess, onError) {
+        var errorCallback = function(obj) {onError(obj);};
+        var successCallback = function(obj) {onSuccess(obj);};
+        exec(successCallback, errorCallback, 'Printer', 'printerStatusStopListener');
+    }
 }
