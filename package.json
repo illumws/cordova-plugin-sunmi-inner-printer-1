@@ -26,7 +26,6 @@
   "bugs": {
     "url": "https://github.com/martinlombana/cordova-plugin-sunmi-inner-printer-v2/issues"
   },
-  "bundleDependencies": false,
   "cordova": {
     "id": "cordova-plugin-sunmi-inner-printer-v2",
     "platforms": [
@@ -34,6 +33,7 @@
     ]
   },
   "main": "www/index.js",
+  "module": "www/index.js"
   "deprecated": false,
   "description": "Cordova/Ionic Sunmi v2 Inner Printer ",
   "engines": {
